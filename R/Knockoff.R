@@ -1,6 +1,6 @@
-# Knockoff on trios
-
 # Project: SardinianTrios 
+# Knockoff on trios considering cleaned data (426 subjects)
+ 
 # setwd main directory (SardinianTrios)
 
 load("checkpoint_knockoff/check_ordered_data.RData")
@@ -26,6 +26,7 @@ which(ordered_geno2$IID != order.id)
 ordered_trios <- ordered_geno2[,1:6]
 ordered_geno2 <- ordered_geno2[,-(1:6)]
 
+# Checks
 dim(ordered_geno2)
 dim(ordered_haplo2)
 
@@ -48,7 +49,7 @@ famid <- ordered_trios$FID
 pheno[pheno==1] <- 0
 pheno[pheno==2] <- 1
 
-model<- glm(pheno ~ 1+ (1|famid) + sex, family=binomial)
+model<- glm(pheno ~ 1 + sex, family=binomial)
 residuals<- model$residuals
 summary(model)
 
@@ -158,10 +159,6 @@ knock_trio_res10 <- KnockoffTrio(ordered_geno2,
 
 
 
-
-
-
-
 # Results
 library(htmlTable)
 library(magrittr)
@@ -173,89 +170,29 @@ res1.sign <- res1[res1$p < 0.01,]
 
 res1.sign %>%  htmlTable
 
-# causal loci
-final1<- causal_loci(knock_trio_res1, fdr = 0.20, M=1)
-window1 <- final1$window 
-window1.3 <- window1[window1$w >1,]
-window1.3 <- na.omit(window1.3)
-window1.4 <- window1.3[window1.3$p <0.01,] # 
-
 # M=2
 res2 <- knock_trio_res2[knock_trio_res2$w >0,] 
 res2 <- na.omit(res2)
 res2.sign <- res2[res2$p < 0.01,]
-
-# causal loci
-final2<- causal_loci(knock_trio_res2, fdr = 0.10, M=2)
-window2 <- final2$window
-window2.3 <- window2[window2$w >1,]
-window2.3 <- na.omit(window2.3)
-window2.4 <- window2.3[window1.3$p <0.01,] # 
-
 
 # M=4
 res4 <- knock_trio_res4[knock_trio_res4$w >0,] 
 res4 <- na.omit(res4)
 res4.sign <- res4[res4$p < 0.01,]
 
-# causal loci
-final4<- causal_loci(knock_trio_res4, fdr = 0.20, M=4)
-window4 <- final4$window
-window4.3 <- window4[window4$w >1,]
-window4.3 <- na.omit(window4.3)
-window4.4 <- window4.3[window4.3$p <0.01,] # 
-
 # M=6
 res6 <- knock_trio_res6[knock_trio_res6$w >0,] 
 res6 <- na.omit(res6)
 res6.sign <- res6[res6$p < 0.01,]
-
-# causal loci
-final6 <- causal_loci(knock_trio_res6, fdr = 0.20, M=6)
-window6 <- final6$window
-window6.3 <- window6[window6$w >1,]
-window6.3 <- na.omit(window6.3)
-window6.4 <- window6.3[window6.3$p <0.01,] # 
-
 
 # M=8
 res8 <- knock_trio_res8[knock_trio_res8$w >0,] 
 res8 <- na.omit(res8)
 res8.sign <- res8[res8$p < 0.01,]
 
-# causal loci
-final8 <- causal_loci(knock_trio_res8, fdr = 0.20, M=8)
-window8 <- final8$window
-window8.3 <- window8[window8$w >1,]
-window8.3 <- na.omit(window8.3)
-window8.4 <- window8.3[window8.3$p <0.01,] # 
-
-
 # M=10
 res10 <- knock_trio_res10[knock_trio_res10$w >0,] 
 res10 <- na.omit(res10)
 res10.sign <- res10[res10$p < 0.01,]
 
-# causal loci
-final10 <- causal_loci(knock_trio_res10, fdr = 0.15, M=10)
-window10 <- final10$window
-window10.3 <- window10[window10$w >1,]
-window10.3 <- na.omit(window10.3)
-window10.4 <- window10.3[window10.3$p <0.01,] # 
-
-
-library(openxlsx)
-write.xlsx(res1.sign, "results_knockoff/res1knockoff.xlsx")
-write.xlsx(res2.sign, "results_knockoff/res2knockoff.xlsx")
-write.xlsx(res4.sign, "results_knockoff/res4knockoff.xlsx")
-write.xlsx(res6.sign, "results_knockoff/res6knockoff.xlsx")
-write.xlsx(res8.sign, "results_knockoff/res8knockoff.xlsx")
-write.xlsx(res10.sign, "results_knockoff/res10knockoff.xlsx")
-
-write.xlsx(window1.4, "results_knockoff/causal1_knockoff.xlsx")
-write.xlsx(window2.4, "results_knockoff/causal2_knockoff.xlsx")
-write.xlsx(window4.4, "results_knockoff/causal4_knockoff.xlsx")
-write.xlsx(window6.4, "results_knockoff/causal6_knockoff.xlsx")
-write.xlsx(window8.4, "results_knockoff/causal8_knockoff.xlsx")
-write.xlsx(window10.4, "results_knockoff/causal10_knockoff.xlsx")
 
