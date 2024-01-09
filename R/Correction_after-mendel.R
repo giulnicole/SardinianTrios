@@ -1,27 +1,29 @@
+# Project: SardinianTrios 
+# Knockoff on trios
+
+# setwd 
+
 setwd("C:/Users/gnbal/Desktop/GitHub/SardinianTrios/data")
 
 library(MultiPhen)
 library(snpStats)
 library(admixr)
 
-# How to import binary files from Plink
-bed <- "imputed_genotypes/chr17-corretto-snps-imputed2-001.bed"
-fam <- "imputed_genotypes/chr17-corretto-snps-imputed2-001.fam"
-bim <- "imputed_genotypes/chr17-corretto-snps-imputed2-001.bim"
+# Binary files from Plink
+bed <- "imputed_genotypes/QC/chr17-corretto-snps-imputed2-001.bed"
+fam <- "imputed_genotypes/QC/chr17-corretto-snps-imputed2-001.fam"
+bim <- "imputed_genotypes/QC/chr17-corretto-snps-imputed2-001.bim"
 
 chr17 <- read.plink(bed, bim, fam)
-
 chr17$fam$pedigree
-
 
 # Subjects filtered with mendel check
 # Corrected for mendelian errors
-bed_me <- "imputed_genotypes/chr17-mendel.bed"
-fam_me <- "imputed_genotypes/chr17-mendel.fam"
-bim_me <- "imputed_genotypes/chr17-mendel.bim"
+bed_me <- "imputed_genotypes/QC/chr17-mendel.bed"
+fam_me <- "imputed_genotypes/QC/chr17-mendel.fam"
+bim_me <- "imputed_genotypes/QC/chr17-mendel.bim"
 
 chr17_me <- read.plink(bed_me, bim_me, fam_me)
-
 chr17_me$fam$pedigree
 
 fam.full <- chr17$fam
@@ -43,7 +45,6 @@ id <- c(id1, id2)
 
 unrelated.sub <- fam.sub[fam.sub$pedigree %in% unrelated$V1,]
 related.sub <- fam.sub[fam.sub$member %in% related$V2,]
-
 
 colnames(fam.sub.df)
 fam.sub.df <- fam.sub[fam.sub$member %in% id,]
@@ -132,8 +133,6 @@ geno.sub <- geno[,7:2540]
 
 geno.sub <- geno[rownames(geno) %in% trios.sub$member,]
 
-
-
 aa <- geno[,1:6]
 aa<- aa[rownames(aa) %in% trios.sub$member,]
 aa$label <- 0
@@ -167,7 +166,6 @@ aa$label <- ifelse(aa$PAT != 0 & aa$MAT !=0, 3, aa$label)
 # Order the dataset first by group_variable =famid and then by order_variable =label
 ordered_geno <- aa %>% 
   arrange(FID, label)
-
 
 
 b <- unique(gsub("_.*", "", rownames(ordered_haplo)))
@@ -209,4 +207,9 @@ b == ordered_geno$IID
 
 # ordered_haplo and ordered_geno are the two final datasets
 
+assign("x", x, envir = my_environment)
+assign("y", y, envir = my_environment)
 
+# Save the environment with the objects to an RData file
+save(ordered_geno, file = "geno_ordered_after_mendel.Rdata")
+save(ordered_haplo, file = "haplo_ordered_after_mendel.Rdata")
