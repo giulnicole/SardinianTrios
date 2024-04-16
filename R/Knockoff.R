@@ -55,7 +55,6 @@ summary(model)
 
 ordered_geno2 <- as.matrix(ordered_geno2)
 
-
 ordered_geno2[is.na(ordered_geno2)] <- 1
 ordered_geno2 <- as.matrix(ordered_geno2)
 
@@ -143,7 +142,7 @@ knock_trio_res8 <- KnockoffTrio(ordered_geno2,
 
 
 
-knock_trio_res10 <- KnockoffTrio(ordered_geno2,
+knock_trio_res10 <- KnockoffTrio(as.matrix(ordered_geno2),
                                 dat.ko = res_knock10,
                                 pos,
                                 start = 30820506,
@@ -156,6 +155,7 @@ knock_trio_res10 <- KnockoffTrio(ordered_geno2,
                                 xchr = FALSE,
                                 sex = FALSE
 )
+
 
 
 
@@ -195,4 +195,18 @@ res10 <- knock_trio_res10[knock_trio_res10$w >0,]
 res10 <- na.omit(res10)
 res10.sign <- res10[res10$p < 0.01,]
 
+final8 <- causal_loci(knock_trio_res8, fdr = 0.35, M=8)
+window8 <- final8$window
+window8 <- window8[window8$w >1,]
+window8 <- na.omit(window8)
+window8 <- window8[window8$p <0.05,] 
+
+window8<- window8[window8$q<0.35,]
+
+# Saving results
+library(openxlsx)
+setwd("C:/Users/gnbal/Desktop/GitHub/SardinianTrios/results_knockoff/knockoff_2534snps")
+write.xlsx(window8, file="res_causal_knockoff.xlsx")
+
+write.table(window8, file="res_causal_knockoff.txt", quote = F)
 

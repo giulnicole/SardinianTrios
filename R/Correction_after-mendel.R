@@ -207,9 +207,6 @@ b == ordered_geno$IID
 
 # ordered_haplo and ordered_geno are the two final datasets
 
-assign("x", x, envir = my_environment)
-assign("y", y, envir = my_environment)
-
 # Save the environment with the objects to an RData file
-save(ordered_geno, file = "geno_ordered_after_mendel.Rdata")
-save(ordered_haplo, file = "haplo_ordered_after_mendel.Rdata")
+# save(ordered_geno2, file = "geno_ordered_after_mendel.Rdata")
+# save(ordered_haplo2, file = "haplo_ordered_after_mendel.Rdata")
