@@ -14,6 +14,8 @@ Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom
 The work is inspired by the method developed by the works of Yang et al. (2022) and the one by Sesia et al. (2022).
 
 
+### Data collection
+Available info can be found in the work by *Bernardinelli et al, (2007), 10.1371/journal.pone.0000480*.
 
 
 ### References
