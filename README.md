@@ -1,4 +1,4 @@
-## Fine mapping analysis using knockoffTrio on with Sardinian sample
+## Fine mapping analysis using knockoffTrio with Sardinian sample
 
 ### Authors 
 Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom(2), Marialuisa Piras(3), Valeria saddi(3) and Luisa Bernardinelli(1)
