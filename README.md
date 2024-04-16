@@ -4,9 +4,12 @@
 Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom(2), Marialuisa Piras(3), Valeria saddi(3) and Luisa Bernardinelli(1)
 
 ### Affiliations
-1Department of Brain and Behavioral Sciences, Università di Pavia, 27100 Pavia, Italy
-2Department of Public Health, University of Copenhagen, 1014 Copenhagen, Denmark
-3Ospedale San Francesco - ASLNuoro
+*1* Department of Brain and Behavioral Sciences, Università di Pavia, 27100 Pavia, Italy
+
+*2* Department of Public Health, University of Copenhagen, 1014 Copenhagen, Denmark
+
+*3* Ospedale San Francesco - ASLNuoro
+
 
 The work is inspired by the method developed by the works of Yang et al. (2022) and the one by Sesia et al. (2022).
 
