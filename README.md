@@ -15,7 +15,7 @@ The work is inspired by the method developed by the works of Yang et al. (2022) 
 
 
 ### Data collection
-Available info can be found in the work by *Bernardinelli et al, (2007), 10.1371/journal.pone.0000480*.
+Available info can be found in the work by *Bernardinelli et al, (2007), https://doi.org/10.1371/journal.pone.0000480*.
 
 
 ### References
