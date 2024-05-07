@@ -35,7 +35,7 @@ ordered_haplo2 <- as.matrix(ordered_haplo2)
 library(KnockoffTrio)
 pos <- bim$V4
 res_knock8 <- create_knockoff(ordered_haplo2, pos, maxcor=0.8, M=8)
-res_knock10 <- create_knockoff(ordered_haplo2, pos, maxcor=0.8, M=10) # covariance matrix is not non-negative definite
+# res_knock10 <- create_knockoff(ordered_haplo2, pos, maxcor=0.8, M=10) # covariance matrix is not non-negative definite
 
 sex <- as.factor(ordered_trios$SEX)
 pheno <- ordered_trios$PHENOTYPE
@@ -77,6 +77,9 @@ library(magrittr)
 res8 <- knock_trio_res8[abs(knock_trio_res8$w)>1,] 
 res8 <- na.omit(res8)
 res8.sign <- res8[res8$p < 0.005,]
+
+knockoff_results<- list(res8, res8.sign)
+save(knockoff_results, file= "results_from_knockoff.RData")
 
 
 

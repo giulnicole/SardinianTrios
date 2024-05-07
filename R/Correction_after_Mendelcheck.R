@@ -198,7 +198,6 @@ for (i in 1:426){
 names(vettore3)<- NULL
 ordered_haplo2 <-  ordered_haplo[match(vettore3, rownames(ordered_haplo)), ]
 
-
 b <- unique(gsub("_.*", "", rownames(ordered_haplo2)))
 
 b == ordered_geno$IID
