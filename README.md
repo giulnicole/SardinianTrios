@@ -11,12 +11,16 @@ Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom
 *3* Ospedale San Francesco - ASLNuoro
 
 
-<<<<<<< HEAD
-=======
+### Abstract 
+**Background**. Multiple sclerosis (MS) is a progressive autoimmune disease affecting the central nervous system, leading to physical and cognitive impairments. Its aetiology remains unclear, but familial predisposition to autoimmunity plays a central role.  
+**Objective and methods**. A family-based fine mapping approach was implemented on a sample of 157 trios to find genetic variants that most likely exert a causal role for the disease in the region 17: 30820506:32483270 bp. This region contains, among all, the protein-coding gene ASIC2, known for its association with MS. The trios were sampled from the genetically isolated Sardinian population (Italy), which is of particular interest due to the high MS prevalence (330 per 100,000 inhabitants). Genotype imputation was performed, leading to 2537 variants which were then analysed via knockoffTrio and family-based logistic regression, across multiple resolutions, to prioritise relevant signals. 
+**Results**. Results showed rs756787 variant, at 3’UTR MYO1D, to be associated with an increased risk of MS (OR=1.57, 95%CI[1.07, 2.29]), while rs56175840, in intronic region of ASIC2, to be associated with a decreased risk of MS (OR=0.17, 95%CI[0.04, 0.74]). 
+**Conclusion**. rs756787 was found correlated with genetic variants associated with the expression of genes involved in neurodegeneration and in the response to Epstein-Barr virus infection.
 
-### Abstract
+**Keywords**
+Multiple sclerosis, SNPs, MYO1D, ASIC2, Trios, Sardinia
 
->>>>>>> dfc753f2f9e6d2d9f5e54e725358cc963501988a
+
 
 ### Data collection
 Available info can be found in the work by *Bernardinelli et al, (2007), https://doi.org/10.1371/journal.pone.0000480*.
