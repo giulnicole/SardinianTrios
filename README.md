@@ -11,6 +11,12 @@ Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom
 *3* Ospedale San Francesco - ASLNuoro
 
 
+<<<<<<< HEAD
+=======
+
+### Abstract
+
+>>>>>>> dfc753f2f9e6d2d9f5e54e725358cc963501988a
 
 ### Data collection
 Available info can be found in the work by *Bernardinelli et al, (2007), https://doi.org/10.1371/journal.pone.0000480*.
