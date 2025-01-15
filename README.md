@@ -1,4 +1,4 @@
-## A fine-mapping knockoff approach revealed association between multiple sclerosis and SNPs at 3’UTR of MYO1D and intronic region of ASIC2 in a study with Sardinian trios
+## A novel approach for fine-mapping MYO1D-ASIC2 SNPs as a promising multiple sclerosis candidate risk region: a knockoff study on Sardinian trios
 
 ### Authors 
 Giulia Nicole Baldrighi(1), Andrea Nova(1), Teresa Fazia(1), Claus Thorn Ekstrom(2), Marialuisa Piras(3), Valeria saddi(3) and Luisa Bernardinelli(1)
