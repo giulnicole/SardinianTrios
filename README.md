@@ -3,7 +3,7 @@
 Giulia Nicole Baldrighi(1), Andrea Nova(2), Claus Thorn Ekstrom(3), Marialuisa Piras(4), Valeria saddi(4), Luisa Bernardinelli(2), Teresa Fazia(2)
 
 ### Affiliations
-*1* Department of Public Healt, Experimental and Forensic Medicine, Università di Pavia, 27100 Pavia, Italy
+*1* Department of Public Health, Experimental and Forensic Medicine, Università di Pavia, 27100 Pavia, Italy
 
 *2* Department of Brain and Behavioral Sciences, Università di Pavia, 27100 Pavia, Italy
 
