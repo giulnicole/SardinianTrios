@@ -1,5 +1,4 @@
-## Knockoff-based fine mapping of MYO1D-ASIC2 SNPs in Sardinian trios: a novel approach to standard genotype analyses for multiple sclerosis
-### Authors 
+## Knockoff-based fine mapping combined with proxy variants analysis to study a short genomic region in trios: a reproducible approach for multiple sclerosis and other complex diseases
 Giulia Nicole Baldrighi(1), Andrea Nova(2), Claus Thorn Ekstrom(3), Marialuisa Piras(4), Valeria saddi(4), Luisa Bernardinelli(2), Teresa Fazia(2)
 
 ### Affiliations
