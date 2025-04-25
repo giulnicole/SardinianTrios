@@ -1,4 +1,5 @@
-## Knockoff-based fine mapping combined with proxy variants analysis to study a short genomic region in trios: a reproducible approach for multiple sclerosis and other complex diseases
+## Knockoff-based fine mapping of MS-associated SNPs in Sardinian trios
+
 Giulia Nicole Baldrighi(1), Andrea Nova(2), Claus Thorn Ekstrom(3), Marialuisa Piras(4), Valeria saddi(4), Luisa Bernardinelli(2), Teresa Fazia(2)
 
 ### Affiliations
